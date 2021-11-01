@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block header %}
+<!-- Page Header-->
+        <header class="masthead">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row" style="max-height: 330px; margin-top: -5%;">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                            <h3>注册</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class='navbar'>
+        <nav>
+            <ul>
+                <li><a href="#">NoteKeeper</a></li>
+                <div class="login-register">
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                    <li><a href="{{url_for('register')}}">Register</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <h1>Register</h1>
+
+    <div class="signup-form">
+        <form method='POST' action=''>
+            {{form.hidden_tag()}}
+            {{form.email}}
+            {{form.username}}
+            {{form.password}}
+            {{form.submit}}
+        </form>
+    </div>
+        <hr />
+{% endblock %}
